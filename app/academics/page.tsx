@@ -172,7 +172,70 @@ export default function AcademicsPage() {
             </div>
           </div>
         </div>
-    
+        
+        {/* ACADEMIC EXCELLENCE */}
+        <div>
+          <SectionHeading
+            title="Academic Excellence"
+            subtitle="Empowering students with knowledge, skills, and values to achieve success in academics and beyond."
+          />
+
+          <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+            
+            {/* Left Side Image */}
+            <div className="relative h-[350px] overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/assets/Academics/academic_excellence.jpg"
+                alt="Academic Excellence"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Right Side Content */}
+            <div>
+              <h3 className="text-3xl font-bold text-accent-strong">
+                Excellence Through Learning
+              </h3>
+
+              <p className="mt-4 leading-relaxed text-text-muted">
+                At Angels Baby Land Matric Higher Secondary School, we are committed to
+                fostering academic excellence through innovative teaching methods,
+                dedicated faculty, and a student-centered learning environment.
+              </p>
+
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-border p-4 shadow-sm">
+                  <h4 className="font-bold">Qualified Faculty</h4>
+                  <p className="mt-2 text-sm text-text-muted">
+                    Experienced educators guiding students towards academic success.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-border p-4 shadow-sm">
+                  <h4 className="font-bold">Smart Learning</h4>
+                  <p className="mt-2 text-sm text-text-muted">
+                    Modern teaching techniques and technology-enabled classrooms.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-border p-4 shadow-sm">
+                  <h4 className="font-bold">Consistent Results</h4>
+                  <p className="mt-2 text-sm text-text-muted">
+                    Strong academic performance and outstanding board examination results.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-border p-4 shadow-sm">
+                  <h4 className="font-bold">Holistic Growth</h4>
+                  <p className="mt-2 text-sm text-text-muted">
+                    Balancing academics with leadership, creativity, and character development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* CLASSES */}
         <div>
           <SectionHeading
@@ -233,70 +296,136 @@ export default function AcademicsPage() {
             subtitle="Celebrating the outstanding achievements of our students."
           />
 
-          <div className="mt-10 space-y-12">
-            {/* 10th Standard */}
+          {/* 10th Standard Toppers */}
+          <div>
+            <h2 className="mb-12 text-center text-3xl font-bold">
+              12th Standard Toppers
+            </h2>
+
+            <div className="flex items-end justify-center gap-6">
+
+              {/* 2nd Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full border-4 border-slate-300 shadow-lg">
+                  <Image
+                    src={tenthToppers[1].image}
+                    alt={tenthToppers[1].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="font-bold">{tenthToppers[1].name}</h3>
+                <p className="text-sm text-text-muted">{tenthToppers[1].score}</p>
+
+                <div className="mt-4 flex h-40 w-32 items-center justify-center rounded-t-xl bg-slate-300 text-4xl font-bold shadow-lg">
+                  2
+                </div>
+              </div>
+
+              {/* 1st Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-yellow-400 shadow-xl">
+                  <Image
+                    src={tenthToppers[0].image}
+                    alt={tenthToppers[0].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="font-bold">{tenthToppers[0].name}</h3>
+                <p className="text-sm text-text-muted">{tenthToppers[0].score}</p>
+
+                <div className="mt-4 flex h-56 w-36 items-center justify-center rounded-t-xl bg-yellow-400 text-5xl font-bold shadow-xl">
+                  1
+                </div>
+              </div>
+
+              {/* 3rd Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full border-4 border-orange-300 shadow-lg">
+                  <Image
+                    src={tenthToppers[2].image}
+                    alt={tenthToppers[2].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="font-bold">{tenthToppers[2].name}</h3>
+                <p className="text-sm text-text-muted">{tenthToppers[2].score}</p>
+
+                <div className="mt-4 flex h-28 w-32 items-center justify-center rounded-t-xl bg-orange-300 text-4xl font-bold shadow-lg">
+                  3
+                </div>
+              </div>
+
+            </div>
+          </div>
+            {/* 12th Standard Toppers */}
             <div>
-              <h2 className="mb-6 text-2xl font-bold text-center">
+              <h2 className="mb-12 mt-20 text-center text-3xl font-bold">
                 10th Standard Toppers
               </h2>
 
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                {tenthToppers.map((student) => (
-                  <Card
-                    key={student.name}
-                    interactive={false}
-                    className="overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                  >
-                    <div className="relative h-72 w-full">
-                      <Image
-                        src={student.image}
-                        alt={student.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+              <div className="flex items-end justify-center gap-6">
 
-                     <div className="p-5 text-center">
-                      <h3 className="text-lg font-bold">{student.name}</h3>
-                      <p className="mt-2 font-semibold text-accent">
-                        {student.score}
-                      </p>
-                    </div>
-                  </Card>
-                ))}
+              {/* 2nd Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full border-4 border-slate-300 shadow-lg">
+                  <Image
+                    src={twelfthToppers[1].image}
+                    alt={twelfthToppers[1].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="font-bold">{twelfthToppers[1].name}</h3>
+                <p className="text-sm text-text-muted">{twelfthToppers[1].score}</p>
+
+                <div className="mt-4 flex h-40 w-32 items-center justify-center rounded-t-xl bg-slate-300 text-4xl font-bold shadow-lg">
+                  2
+                </div>
               </div>
-            </div>
 
-            {/* 12th Standard */}
-            <div>
-              <h2 className="mb-6 text-2xl font-bold text-center">
-                12th Standard Toppers
-              </h2>
+              {/* 1st Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-yellow-400 shadow-xl">
+                  <Image
+                    src={twelfthToppers[0].image}
+                    alt={twelfthToppers[0].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                {twelfthToppers.map((student) => (
-                  <Card
-                    key={student.name}
-                    interactive={false}
-                    className="overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                  >
-                    <div className="relative h-72 w-full">
-                      <Image
-                        src={student.image}
-                        alt={student.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                <h3 className="font-bold">{twelfthToppers[0].name}</h3>
+                <p className="text-sm text-text-muted">{twelfthToppers[0].score}</p>
 
-                    <div className="p-5 text-center">
-                      <h3 className="text-lg font-bold">{student.name}</h3>
-                      <p className="mt-2 font-semibold text-accent">
-                        {student.score}
-                      </p>
-                    </div>
-                  </Card>
-                ))}
+                <div className="mt-4 flex h-56 w-36 items-center justify-center rounded-t-xl bg-yellow-400 text-5xl font-bold shadow-xl">
+                  1
+                </div>
+              </div>
+
+              {/* 3rd Rank */}
+              <div className="flex flex-col items-center">
+                <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full border-4 border-orange-300 shadow-lg">
+                  <Image
+                    src={twelfthToppers[2].image}
+                    alt={twelfthToppers[2].name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="font-bold">{twelfthToppers[2].name}</h3>
+                <p className="text-sm text-text-muted">{twelfthToppers[2].score}</p>
+
+                <div className="mt-4 flex h-28 w-32 items-center justify-center rounded-t-xl bg-orange-300 text-4xl font-bold shadow-lg">
+                  3
+                </div>
               </div>
             </div>
           </div>

@@ -213,7 +213,7 @@ export default function AboutPage() {
       <div className="mt-14 space-y-14 lg:mt-20 lg:space-y-20">
         {/* VISION + MISSION */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <Card interactive={false} className="p-8">
+          {/* <Card interactive={false} className="p-8">
             <div className="mb-4 h-1 w-12 bg-accent" />
             <h3>Our Vision</h3>
             <p className="mt-3 text-text-muted">
@@ -230,7 +230,7 @@ export default function AboutPage() {
               academics and extracurricular activities, fostering discipline,
               creativity, and leadership in every student.
             </p>
-          </Card>
+          </Card> */}
         </div>
 
         {/* LEADERSHIP — Founder → Correspondent → Secretary. Stacked cards, each

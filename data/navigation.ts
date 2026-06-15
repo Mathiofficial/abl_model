@@ -22,9 +22,17 @@ export const navItems: NavItem[] = [
       { label: "Culturals", href: "/activities/culturals" },
       { label: "Clubs", href: "/activities/clubs" },
       { label: "Sports", href: "/activities/sports" },
+      {label: "extracurricular", href: "/activities/extracurricular" },
     ],
   },
-  { label: "Achievements", href: "/achievements" },
+  { label: "Achievements", 
+    href: "/achievements",
+    children: [
+      { label: "School Achievements", href: "/achievements/school" },
+      { label: "Teacher Achievements", href: "/achievements/teachers" },
+      { label:  "Student Achievements", href: "/achievements/student" },
+    ],
+  },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
